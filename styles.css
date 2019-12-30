@@ -1,0 +1,26 @@
+header {
+    background-image: url(Images/eberhard-grossgasteiger-YV_gbygzlWk-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 200px 0;
+}
+
+header img {
+    width: 89px;
+    height: auto;
+    margin-left: 3px;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
+    font-size: 3em;
+    margin-bottom: 0;
+}
