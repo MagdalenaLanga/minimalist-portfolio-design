@@ -1,26 +1,317 @@
+
+* {
+    box-sizing: border-box;
+} 
+
+html {
+    background-color: gray;
+}
+
+body {
+    color: black;
+    font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
 header {
     background-image: url(Images/eberhard-grossgasteiger-YV_gbygzlWk-unsplash.jpg);
     background-size: cover;
     display: flex;
+    justify-content: center;
+    padding: 15% 0;
+}
+
+header section {
+    display: flex;
     flex-direction: column;
 }
 
-.wrap {
-    margin: 0 auto;
-    padding: 200px 0;
-}
-
-header img {
-    width: 89px;
-    height: auto;
-    margin-left: 3px;
-
-}
-
 h1 {
-    text-align: center;
     color: white;
     font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
     font-size: 3em;
     margin-bottom: 0;
 }
+/* biala pozioma linia*/
+header div {
+    background-color: white;
+    width: 89px; 
+    height: 18px;
+    margin: 3px;
+}
+
+ul {
+    padding: 0;
+    margin: 2em 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    padding: 5px 10px;
+    margin: 0 70px;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 3px;
+}   
+
+a:hover {
+    border-bottom: 2px solid black;
+}
+
+/* Global */
+
+article {
+    display: flex;
+    justify-content: center;
+}
+
+/* About me */
+
+article > div {
+    flex: 50%
+}
+
+img[alt="Portret"] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+article > div:nth-child(2) {
+    background-color: #082430;
+    padding: 3% 4% 2% 3%;
+}
+
+h2 {
+    font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
+    color: white;
+    font-size: 3em;
+    margin-top: 0;
+}
+
+p {
+    color: white;
+}
+
+/*  Projects */
+
+section > div:nth-of-type(n+2) {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+div > div {
+    width: 30%;
+    margin: 10px;
+    position: relative;
+}
+
+.column {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section > div:first-child {
+    font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
+    color: #082430;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    width: 30%;
+}
+
+.h2 {
+    position: absolute;
+    left: -50px;
+    top: 67px;
+}
+
+/* responsive */
+
+@media screen and (min-width:1250px) {
+    body { 
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:930px) {
+    section > div:nth-of-type(n+2) {
+        display: block;
+        justify-content: center;
+    }
+    
+    div > div {
+        width: 90%;
+        margin: auto;
+        position: relative;
+    }
+
+    section > div:first-child {
+        padding-left: 40px;
+    }
+
+    .h2 {
+        display: none;
+    }
+
+    article {
+        display: block;
+    }
+
+    li {
+        padding: 5px 5px;
+        margin: 0 10px;
+    }    
+}
+
+
+
+/*
+.wrap {
+    margin: 0 auto;
+    padding: 200px 0;
+}
+
+
+h2 {
+    font-family: 'Roboto', 'Century Gothic', Arial, sans-serif;
+    font-size: 3em;
+    margin-top: 0;
+    padding: 50px 50px 0;
+}
+
+
+
+
+
+
+ }
+
+ nav a:hover {
+     border-bottom: black;
+     border-style: solid;
+     border-width: 0 0 2px 0;
+ }
+
+ .about-me {
+    display: flex;
+     margin-top: 2em;
+     overflow: hidden;
+ }
+
+ .portrait {
+    flex: 1;
+     overflow: hidden;
+     float: left;
+     width: 50%;
+     height: 100%;
+ }
+
+ .about-me img {
+    max-width: 700px;
+ }
+
+ .vertical-line {
+     background-color: white;
+     height: 89px;
+     width: 18px;
+     position: absolute;
+     top: 60px;
+     left: -9px;
+
+ }
+
+ .text {
+     background-color: #082430;
+     color: white;
+    flex: 1;
+    float: left;
+     width: 50%;
+     height: 100%;
+     position: relative;
+ }
+
+ .paragraf {
+     width: 80%;
+     padding: 0 50px 50px;
+ }
+
+ #about-me {
+     margin-top: 0;
+     position: relative;
+ }
+.projects-align {
+    display: flex;
+    justify-content: center;
+}
+
+ .projects {
+     display: grid;
+     grid-template-columns: repeat(2, auto);
+     column-gap: 3em;
+     row-gap: 3em;
+     grid-template-rows: minmax(500px, auto);
+ }
+
+ .projects img {
+     max-height: 800px;
+ }
+
+ .projects a {
+     overflow: hidden;
+     max-height: 700px;
+ }
+
+ #projects {
+     margin-left: 11%;
+     padding-left: 0;
+     position: relative;
+ }
+
+ .horizontal-line {
+    height: 89px;
+    width: 18px;
+    background-color: #082430;
+    position: relative;
+    float: left;
+    top: 60px;
+    left: 100px;
+
+ }
+
+ footer {
+     background-color: #082430;
+     color: white;
+     text-align: center;
+     padding: 0 8% 8%;
+     margin-top: 50px;
+ }
+
+ .social-media {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .social-media a {
+     padding: 5px 10px;
+     margin: 0 60px;
+ }
+
+ #contact {
+     margin-bottom: 70px;
+ }
